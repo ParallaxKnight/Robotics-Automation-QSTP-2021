@@ -4,7 +4,7 @@ from std_msgs.msg import String
 
 class HelloWorld:
     def __init__(self):
-        self.pub = rospy.Publisher('helloworld2', String, queue_size=1)
+        self.pub = rospy.Publisher('helloworld', String, queue_size=1)
         self.sub1 = rospy.Subscriber('hello', String, self.callback1)
         self.sub2 = rospy.Subscriber('world', String, self.callback2)
         self.message = String()
@@ -29,6 +29,6 @@ class HelloWorld:
         
 
 if __name__ == "__main__":
-    rospy.init_node('helloworld2')
+    rospy.init_node('helloworld')
     name = HelloWorld()
     rospy.spin()
