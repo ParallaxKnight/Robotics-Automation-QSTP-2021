@@ -1,0 +1,8 @@
+
+
+<launch>
+   <node type="path_publisher.py" pkg="week3" name="path_publisher" />
+   <arg name="path_topic"/>
+   <node type="pid.py" pkg="week3" name="pid" args="$(arg path_topic)"/>
+
+</launch>
