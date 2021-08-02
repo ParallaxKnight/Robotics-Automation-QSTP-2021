@@ -48,7 +48,7 @@ def path_coordinates(msg):
 
 if __name__ == "__main__":
    rospy.init_node("pid")
-   rate = rospy.Rate(10)
+   rate = rospy.Rate(5)
    sub2 = rospy.Subscriber('/odom', Odometry, odom_data)
    pub = rospy.Publisher('/cmd_vel', Twist, queue_size = 1)
    args = rospy.myargv(argv = sys.argv)
@@ -97,17 +97,17 @@ if __name__ == "__main__":
          print(angle_destination, inc_x, inc_y)
          if abs(angle_destination) > 0.1:
             if angle_destination > 0:
-               speed.angular.z = 0.2
+               speed.angular.z = 0.15
 
             elif angle_destination < 0:
-               speed.angular.z = -0.2
+               speed.angular.z = -0.15
    
             speed.linear.x = 0.0
             pub.publish(speed)
             
 
          elif abs(inc_x) > 0.05 or abs(inc_y) > 0.05:
-            speed.linear.x = 0.2
+            speed.linear.x = 0.1
             speed.angular.z = 0.0
             pub.publish(speed)            
 
