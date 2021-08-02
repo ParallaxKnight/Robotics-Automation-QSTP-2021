@@ -15,6 +15,6 @@ Kinematic models of robots approximate their behaviour given various control com
 
 Unicycle model is the simplest there exists to approximate the behaviour of a differential drive Robot. Refer to [this](http://planning.cs.uiuc.edu/node660.html) resource to take a look at the equations in general
 
-## Logistics
+### Logistics
 1. There is a python file accompanying this assignment. You have to complete some of the functions and plot the trajectory using `matplotlib`. [[Assignment](unicycle.py)].
 2. Details regarding the submission, deadline etc. are updated in the Google Classroom.
