@@ -1,0 +1,4 @@
+## Explaination for the Obstacle Prevention in the Environment
+### There are no obstacles in this environment. How would tackle a scenario where there are sparse obstacles? 
+With the help of Laser Scan in Gazebo TurtleBot3, we can figure out the distance of the obstacles. 
+Assuming that there are no obstacles in the path, we will plot a course for the bot. As the bot follows the path, it will encounter obstacles. Now with the help of a Laser, we can calculate the distance between the obstacle and the bot. By setting a minimum threshold distance between them, the bot will rotate until the distance between increases above the threshold value, and the bot will start moving. This Process along with PID controller will ensure that bot reaches the destination as well as avoid any obstacles in the path. 
